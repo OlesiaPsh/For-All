@@ -2,4 +2,9 @@ qwerrty
 
 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
 
+<<<<<<< HEAD
 happy
+=======
+suka jopa ghmmhm
+fgnfn
+>>>>>>> develop
