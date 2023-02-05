@@ -7,4 +7,4 @@ for i in proc:
 
     deposit.append(round(i/100*money))
 print(deposit)
-print(max(deposit))
+print('Максимальная сумма, которую вы можете заработать — 'max(deposit))
