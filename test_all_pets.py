@@ -17,9 +17,7 @@ def test_all_pets():
     time.sleep(5)
     pytest.driver.implicitly_wait(10)
     pytest.driver.find_element(By.CSS_SELECTOR, 'div#navbarNav > ul > li > a').click()
-    #pytest.driver.find_element(By.CSS_SELECTOR, 'div#navbarNav>ul>li>a').click()
-
-
+    
     time.sleep(5)
 
    # Проверяем, что мы оказались на главной странице пользователя
