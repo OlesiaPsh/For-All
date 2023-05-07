@@ -1,7 +1,7 @@
  #негативные тесты на заплнение полей Имя, Фамилия, формы регистрации некорректными значениями
 import pytest
 
-@pytest.mark.parametrize("name", ['Г', 'Иван1', 'Mario', 'ааааааааааааааааааааааааааааааааа'])
+@pytest.mark.parametrize("name", ['Г', 'Иван1', 'Иван.', 'Mario', 'ааааааааааааааааааааааааааааааааа'])
 def test_reg_page_name(browser, reg_page_fix, name):  #негативные тесты
     reg_page_fix.go_to_site()
     reg_page_fix.click_to_reg_button()
@@ -11,7 +11,7 @@ def test_reg_page_name(browser, reg_page_fix, name):  #негативные те
 
     assert reg_page_fix.get_name_message() == 'Необходимо заполнить поле кириллицей. От 2 до 30 символов.'
 
-@pytest.mark.parametrize("surname", ['Д', 'Иванов1', 'Mario', 'ааааааааааааааааааааааааааааааааа'])
+@pytest.mark.parametrize("surname", ['Д', 'Иванов1', 'Иванов.', 'Mario', 'ааааааааааааааааааааааааааааааааа'])
 def test_reg_page_surname(browser, reg_page_fix, surname):  #негативные тесты
     reg_page_fix.go_to_site()
     reg_page_fix.click_to_reg_button()
