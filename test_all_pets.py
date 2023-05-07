@@ -17,9 +17,7 @@ def test_all_pets():
     time.sleep(5)
     pytest.driver.implicitly_wait(10)
     pytest.driver.find_element(By.CSS_SELECTOR, 'div#navbarNav > ul > li > a').click()
-    #pytest.driver.find_element(By.CSS_SELECTOR, 'div#navbarNav>ul>li>a').click()
-
-
+    
     time.sleep(5)
 
    # Проверяем, что мы оказались на главной странице пользователя
@@ -33,9 +31,6 @@ def test_all_pets():
 
     pytest.driver.implicitly_wait(10)
     quant_pets = pytest.driver.find_element(By.XPATH, '//div[@class=".col-sm-4 left"]')
-    print(quant_pets.text.split('\n')[1].split(':')[-1])
-    print(len(pets))
-
     assert int(quant_pets.text.split('\n')[1].split(':')[-1]) == len(pets)
 
 
